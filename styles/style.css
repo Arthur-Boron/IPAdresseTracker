@@ -1,0 +1,174 @@
+body {
+	margin: 0;
+}
+
+.header {
+	background: url('../images/pattern-bg-desktop.png');
+	background-size: cover;
+	height: 200px;
+	position: relative;
+	z-index: 2;
+}
+
+.title {
+	text-align: center;
+    font-size: 2em;
+    padding-top: 1em;
+    color: white;
+}
+
+/* Style du conteneur */
+.search-container {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 50%;
+	height: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	position: relative;
+}
+
+/* Style de l'input */
+.search-container input[type=text] {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	font-size: 16px;
+	background-color: #fff;
+	color: #000;
+	border-radius: 10px 0px 0px 10px;
+	border-color: black;
+ 	outline: none;
+ 	box-shadow: 0 0 0 2px black;
+}
+
+/* Style du bouton de recherche */
+.search-container button[type=submit] {
+	padding: 10px;
+	background-color: #000;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 10px 10px 0px;
+	border-color: black;
+ 	outline: none;
+ 	box-shadow: 0 0 0 2px black;
+}
+
+.invalid {
+	border-color: red !important;
+  	box-shadow: 0 0 0 2px red !important;
+}
+
+/* Style de l'icône de recherche */
+.search-container button i {
+	color: #fff;
+}
+
+.search-image {
+	height: 100%;
+}
+
+/* Style du bouton de recherche au survol */
+.search-container button:hover {
+	background-color: #333;
+	box-shadow: 0 0 0 2px #333;
+}
+
+.info-container {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	width: 80%;
+    height: 130px;;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index: 3;
+    display: flex;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.info-title {
+	height: 30%;
+	width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: lavender;
+}
+
+.info-data {
+	height: 70%;
+	width: 100%;
+	display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.no-result-message {
+	width: 100%;
+    height: 70%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    opacity: 0;
+}
+
+.leaflet-map {
+	height: calc(100vh - 200px);
+	position: relative;
+	z-index: 1;
+}	
+
+.map {
+	height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  	.header {
+		background: url('../images/pattern-bg-mobile.png');
+		background-size: cover;
+		height: 350px;
+	}
+
+	.search-container {
+		height: 10%;
+	}
+
+	.info-container {
+		width: 60%;
+	    height: 250px;
+	    flex-direction: column;
+	}
+
+	.info {
+		flex-direction: column;
+	    width: 100%;
+	    height: 25%;
+	    align-items: center;
+	}
+
+	.info-title {
+		height: 50%;
+	}
+
+	.info-data {
+		height: 50%;
+	}
+
+	.leaflet-map {
+		height: 50vh;
+	}
+}
